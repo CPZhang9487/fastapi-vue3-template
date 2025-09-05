@@ -1,7 +1,6 @@
-from fastapi import FastAPI
 import uvicorn
 
-app = FastAPI()
+from backend.app import app
 
 
 def main():
