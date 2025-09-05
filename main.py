@@ -1,5 +1,11 @@
+from fastapi import FastAPI
+import uvicorn
+
+app = FastAPI()
+
+
 def main():
-    print("Hello from fastapi-vue3-template!")
+    uvicorn.run(app)
 
 
 if __name__ == "__main__":
