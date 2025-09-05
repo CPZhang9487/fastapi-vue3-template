@@ -54,3 +54,24 @@
 且當 `FastAPI` 被瀏覽時，log 將會被寫入
 
 並在每日午夜自動備份檔案
+
+### Commit-004
+
+來到網頁前端 `Vue3` 的部分
+
+必須先安裝 [Node.js](https://nodejs.org/en/download)
+
+接著在專案底下使用 `npm create vite`
+- `Project name` 我都命名為 `frontend`
+- `Framework` 選擇 `Vue`
+- `Variant` 根據個人習慣使用 `JavaScript` 或 `TypeScript`，我選擇 `TypeScript`
+
+然後使用 `cd frontend` (後續所有 `npm` 相關的命令都會在 `frontend/` 底下運行，不再贅述)
+
+使用 `npm install` 安裝所需依賴 (當沒有 `frontend/node_modules/` 資料夾時都需先使用此命令)
+
+然後就可以使用 `npm run dev` 進行 `Vue3` 的開發了
+
+開發時都是瀏覽 [http://localhost:5173](http://localhost:5173) 進行除錯
+
+且程式碼更新時，網頁會熱重載，大多數時候都不需要刷新網頁
