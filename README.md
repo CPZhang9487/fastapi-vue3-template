@@ -43,11 +43,11 @@
 為了後續方便，將功能分成對應的檔案
 
 - 建立
-    - [backend/util/uvicorn_log_override.py](backend/util/uvicorn_log_override.py)
-    - [backend/lifespan.py](backend/lifespan.py)
-    - [backend/app.py](backend/app.py)
+    - [backend/util/uvicorn_log_override.py](https://github.com/CPZhang9487/fastapi-vue3-template/blob/9600e31a828b854105bb3b58afb63b04af4829a2/backend/util/uvicorn_log_override.py)
+    - [backend/lifespan.py](https://github.com/CPZhang9487/fastapi-vue3-template/blob/9600e31a828b854105bb3b58afb63b04af4829a2/backend/lifespan.py)
+    - [backend/app.py](https://github.com/CPZhang9487/fastapi-vue3-template/blob/9600e31a828b854105bb3b58afb63b04af4829a2/backend/app.py)
 - 修改
-    - [main.py](main.py)
+    - [main.py](https://github.com/CPZhang9487/fastapi-vue3-template/blob/9600e31a828b854105bb3b58afb63b04af4829a2/main.py)
 
 運行伺服器後會建立 `log/uvicorn.access.log`
 
