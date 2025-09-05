@@ -33,3 +33,24 @@
 瀏覽 [http://127.0.0.1:8000](http://127.0.0.1:8000) 會看到 `{"detail":"Not Found"}`
 
 瀏覽 [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs) 會看到 `Swagger UI`
+
+### Commit-003
+
+很多時候會需要將終端的信息備份成檔案
+
+這邊透過 `logging` 的 `TimedRotatingFileHandler` 類實作這部分
+
+為了後續方便，將功能分成對應的檔案
+
+- 建立
+    - [backend/util/uvicorn_log_override.py](backend/util/uvicorn_log_override.py)
+    - [backend/lifespan.py](backend/lifespan.py)
+    - [backend/app.py](backend/app.py)
+- 修改
+    - [main.py](main.py)
+
+運行伺服器後會建立 `log/uvicorn.access.log`
+
+且當 `FastAPI` 被瀏覽時，log 將會被寫入
+
+並在每日午夜自動備份檔案
