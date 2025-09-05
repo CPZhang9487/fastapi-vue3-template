@@ -24,7 +24,7 @@
 
 先使用 `uv add fastapi[all]` 加入相關依賴到 `Python` 專案
 
-再來修改 [main.py](main.py)
+再來修改 [main.py](https://github.com/CPZhang9487/fastapi-vue3-template/blob/c910e1d94ce51504de4c8c11c12372384606ddab/main.py)
 
 最後使用 `uv run main.py` (後面都是使用此命令運行伺服器，不再贅述) 運行 `uvicorn`
 
