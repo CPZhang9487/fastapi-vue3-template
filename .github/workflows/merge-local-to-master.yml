@@ -1,0 +1,43 @@
+name: Merge Local to Master
+
+on:
+  push:
+    branches:
+      - local
+
+jobs:
+  merge-and-update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+  
+      - name: Configure Git
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+      
+      - name: Merge Local into Master
+        run: |
+          git checkout master
+          git pull origin master
+          git merge local --no-ff -m "Merge branch 'local' into 'master'"
+      
+      - name: Update Readme Links to Github URLs
+        run: |
+          REPO_FULL_NAME=${{ github.repository }}
+          COMMIT_SHA=${{ github.sha }}
+          REPO_URL="https://github.com/$REPO_FULL_NAME/blob/$COMMIT_SHA"
+
+          if [ -f README.md ]; then
+            sed -i -E "/\[.*\]\(https?:\/\//b; s#\[([^]]*)\]\(([^)]*)\)#[\1]($REPO_URL/\2)#g" README.md
+          fi
+          git add README.md
+          git commit -m "Update README.md links to point to GitHub" || echo "No changes to commit"
+      
+      - name: Push Changes to Master
+        run: |
+          git push origin master
