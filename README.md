@@ -86,6 +86,6 @@
 
 而讓 `FastAPI` 呈現 `frontend/dist/` 的方式為
 
-修改 [app.py](backend/app.py)
+修改 [backend/app.py](backend/app.py)
 
 瀏覽 [http://127.0.0.1:8000](http://127.0.0.1:8000) 就會看到網頁內容
