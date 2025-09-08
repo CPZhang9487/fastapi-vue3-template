@@ -75,3 +75,17 @@
 開發時都是瀏覽 [http://localhost:5173](http://localhost:5173) 進行除錯
 
 且程式碼更新時，網頁會熱重載，大多數時候都不需要刷新網頁
+
+### Commit-005
+
+再來說說前端網頁的編譯與後端呈現前端的方法
+
+編譯 `Vue3` 使用 `npm run build`
+
+會看到 `frontend/` 裡面有 `dist/` 資料夾，裡面即是編譯出來的相關檔案
+
+而讓 `FastAPI` 呈現 `frontend/dist/` 的方式為
+
+修改 [app.py](backend/app.py)
+
+瀏覽 [http://127.0.0.1:8000](http://127.0.0.1:8000) 就會看到網頁內容
