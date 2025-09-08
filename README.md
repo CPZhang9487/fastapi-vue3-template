@@ -86,6 +86,6 @@
 
 而讓 `FastAPI` 呈現 `frontend/dist/` 的方式為
 
-修改 [app.py](backend/app.py)
+修改 [app.py](https://github.com/CPZhang9487/fastapi-vue3-template/blob/2404b91a0b4ac0f42c01987dbf67a9918e01b8dc/backend/app.py)
 
 瀏覽 [http://127.0.0.1:8000](http://127.0.0.1:8000) 就會看到網頁內容
