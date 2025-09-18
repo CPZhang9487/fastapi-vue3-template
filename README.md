@@ -89,3 +89,19 @@
 修改 [backend/app.py](https://github.com/CPZhang9487/fastapi-vue3-template/blob/89f2eb962f58b0b91d676abee3f71d3bcfb7ae39/backend/app.py)
 
 瀏覽 [http://127.0.0.1:8000](http://127.0.0.1:8000) 就會看到網頁內容
+
+### Commit-006
+
+介紹一下 `Python` 的一個依賴 `orjson`
+
+這是一個使用 `Rust` 重寫的 `json` 庫
+
+且效率快了 `Python` 自帶的 `json` 庫好幾倍
+
+運行 [other/json_orjson_compare.py](other/json_orjson_compare.py) 來測試 `json` 與 `orjson` 的運行速度
+
+而 `FastAPI` 預設大多數回應都是使用 `json` 轉換格式
+
+我們可以簡單的增加幾行程式碼讓 `FastAPI` 使用 `orjson`
+
+修改 [backend/app.py](backend/app.py)
