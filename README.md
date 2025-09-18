@@ -98,10 +98,10 @@
 
 且效率快了 `Python` 自帶的 `json` 庫好幾倍
 
-運行 [other/json_orjson_compare.py](other/json_orjson_compare.py) 來測試 `json` 與 `orjson` 的運行速度
+運行 [other/json_orjson_compare.py](https://github.com/CPZhang9487/fastapi-vue3-template/blob/4026d88d60e69b636ea02c4ee54aa1ab14425097/other/json_orjson_compare.py) 來測試 `json` 與 `orjson` 的運行速度
 
 而 `FastAPI` 預設大多數回應都是使用 `json` 轉換格式
 
 我們可以簡單的增加幾行程式碼讓 `FastAPI` 使用 `orjson`
 
-修改 [backend/app.py](backend/app.py)
+修改 [backend/app.py](https://github.com/CPZhang9487/fastapi-vue3-template/blob/4026d88d60e69b636ea02c4ee54aa1ab14425097/backend/app.py)
