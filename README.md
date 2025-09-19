@@ -104,7 +104,7 @@
 
 我們可以簡單的增加幾行程式碼讓 `FastAPI` 使用 `orjson`
 
-修改 [backend/app.py](https://github.com/CPZhang9487/fastapi-vue3-template/blob/91c0fdda52dc123d1067106ff0383a107fb53693/backend/app.py)
+修改 [backend/app.py](https://github.com/CPZhang9487/fastapi-vue3-template/blob/4026d88d60e69b636ea02c4ee54aa1ab14425097/backend/app.py)
 
 ### Commit-007
 
