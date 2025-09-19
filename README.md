@@ -104,7 +104,7 @@
 
 我們可以簡單的增加幾行程式碼讓 `FastAPI` 使用 `orjson`
 
-修改 [backend/app.py](backend/app.py)
+修改 [backend/app.py](https://github.com/CPZhang9487/fastapi-vue3-template/blob/91c0fdda52dc123d1067106ff0383a107fb53693/backend/app.py)
 
 ### Commit-007
 
@@ -144,9 +144,9 @@
 這是因為目前 `FastAPI` 尚未實作 `SPA` 的相關功能
 
 - 建立
-    - [backend/service/SPA_support.py](backend/service/SPA_support.py)
+    - [backend/service/SPA_support.py](https://github.com/CPZhang9487/fastapi-vue3-template/blob/91c0fdda52dc123d1067106ff0383a107fb53693/backend/service/SPA_support.py)
 - 修改
-    - [backend/app.py](backend/app.py)
+    - [backend/app.py](https://github.com/CPZhang9487/fastapi-vue3-template/blob/91c0fdda52dc123d1067106ff0383a107fb53693/backend/app.py)
 
 當前端的路由做更改時
 
@@ -155,9 +155,9 @@
 至於 `404 Not Found` 頁面則可以這麼做
 
 - 建立
-    - [frontend/src/views/NotFound.vue](frontend/src/views/NotFound.vue)
+    - [frontend/src/views/NotFound.vue](https://github.com/CPZhang9487/fastapi-vue3-template/blob/91c0fdda52dc123d1067106ff0383a107fb53693/frontend/src/views/NotFound.vue)
 - 修改
-    - [frontend/src/router/index.ts](frontend/src/router/index.ts)
+    - [frontend/src/router/index.ts](https://github.com/CPZhang9487/fastapi-vue3-template/blob/91c0fdda52dc123d1067106ff0383a107fb53693/frontend/src/router/index.ts)
 
 這樣瀏覽像是 [http://127.0.0.1:8000/test](http://127.0.0.1:8000/test) 這種沒有實作的頁面
 
