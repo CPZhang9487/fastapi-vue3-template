@@ -105,3 +105,60 @@
 我們可以簡單的增加幾行程式碼讓 `FastAPI` 使用 `orjson`
 
 修改 [backend/app.py](backend/app.py)
+
+### Commit-007
+
+`Vite` 在建立 `Vue3` 專案時可以選擇模板 `Official Vue Starter ↗`
+
+推薦初學者選擇所有功能並在 `frontend/src/` 查看範例程式碼
+
+`frontend/src/` 底下的結構為
+- `assets/`
+- `components/`
+- `router/`
+- `stores/`
+- `views/`
+- `App.vue`
+- `main.ts`
+
+而剛剛選取的功能當中，較為重要的是
+- `Router`
+    - 用於建立 `SPA (單頁應用程式)`
+    - 使用官方路由庫 `vue-router`
+    - 對應的資料夾為 `router/`
+- `Pinia`
+    - 用於管理網頁狀態
+    - 使用官方狀態庫 `pinia`
+    - 對應的資料夾為 `stores/`
+
+推薦學習 `Vue3` 語法後接著研究上述兩個功能
+
+編譯官方範例後運行 `FastAPI` 並瀏覽 [http://127.0.0.1:8000](http://127.0.0.1:8000) 會發現
+
+點擊 `About` 按鈕後會跳至 [http://127.0.0.1:8000/about](http://127.0.0.1:8000/about)
+
+再點擊 `Home` 按鈕就會跳回 [http://127.0.0.1:8000](http://127.0.0.1:8000)
+
+但當你在 `about` 頁面刷新瀏覽器，卻會跳出 `{"detail":"Not Found"}`
+
+這是因為目前 `FastAPI` 尚未實作 `SPA` 的相關功能
+
+- 建立
+    - [backend/service/SPA_support.py](backend/service/SPA_support.py)
+- 修改
+    - [backend/app.py](backend/app.py)
+
+當前端的路由做更改時
+
+後端再修改 `SPA_Support.get_response` if 判斷式 (後續不再贅述)
+
+至於 `404 Not Found` 頁面則可以這麼做
+
+- 建立
+    - [frontend/src/views/NotFound.vue](frontend/src/views/NotFound.vue)
+- 修改
+    - [frontend/src/router/index.ts](frontend/src/router/index.ts)
+
+這樣瀏覽像是 [http://127.0.0.1:8000/test](http://127.0.0.1:8000/test) 這種沒有實作的頁面
+
+就會出現 `404 Not Found`
