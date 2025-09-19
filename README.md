@@ -162,3 +162,23 @@
 這樣瀏覽像是 [http://127.0.0.1:8000/test](http://127.0.0.1:8000/test) 這種沒有實作的頁面
 
 就會出現 `404 Not Found`
+
+### Commit-008
+
+很多時候需要將程式部屬到其他地方
+
+透過人工腳本部屬、`Docker`、打包成執行檔等方式部屬
+
+這邊介紹打包成執行檔的方法
+
+透過 `Python` 的 `pyinstaller` 打包成執行檔
+
+使用 `uv add pyinstaller` 加入依賴
+
+然後修改 [backend/app.py](backend/app.py)
+
+最後使用 `uv run pyinstaller main.py --onefile --add-data frontend/dist:frontend/dist` 得到執行檔
+
+注意打包前需要將前端進行編譯
+
+建議再額外寫個腳本編譯前端並打包執行檔

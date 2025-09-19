@@ -1,3 +1,6 @@
+from pathlib import Path
+import sys
+
 from fastapi import FastAPI
 from fastapi.responses import ORJSONResponse
 
@@ -12,7 +15,7 @@ app = FastAPI(
 app.mount(
     "/",
     SPA_Support(
-        directory="frontend/dist",
+        directory=str(Path(getattr(sys, "_MEIPASS", "")) / "frontend/dist"),
     ),
     name="spa",
 )
