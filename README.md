@@ -175,7 +175,7 @@
 
 使用 `uv add pyinstaller` 加入依賴
 
-然後修改 [backend/app.py](backend/app.py)
+然後修改 [backend/app.py](https://github.com/CPZhang9487/fastapi-vue3-template/blob/ff80f5c7c12b1a8a01b77aced555f156211c2e1a/backend/app.py)
 
 最後使用 `uv run pyinstaller main.py --onefile --add-data frontend/dist:frontend/dist` 得到執行檔
 
